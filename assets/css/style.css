@@ -98,19 +98,25 @@ header {
   align-items: center;
   margin: 8vh 0 8vh 0;
 }
-
+/*************/
+header {
+  top: -50px;
+  left: 0;
+  width: 100%;
+}
+/***************/
 header h1 {
   font-family: "TiemposHeadline-Semibold";
 }
 
-header nav ul {
+header nav .menu_list_pc {
   font-family: "Graphik-Regular";
   display: flex;
   list-style: none;
   gap: 10%;
 }
 
-header nav ul li {
+header nav .menu_list_pc li {
   border: 2px solid transparent;
   padding: 1.5% 3%;
   border-radius: 5px;
@@ -118,14 +124,14 @@ header nav ul li {
   cursor: pointer;
 }
 
-header nav ul li:hover {
+header nav .menu_list_pc li:hover {
   border: 2px solid black;
   padding: 1.5% 3%;
   border-radius: 5px;
   transition: 0.3s;
 }
 
-header nav ul a {
+header nav .menu_list_pc a {
   color: black;
   text-decoration: none;
 }
@@ -145,7 +151,40 @@ header button:hover {
   transition: 0.4s;
 }
 
+/***************************************BurgerMenu************************************/
+
+header .menu__list_pc {
+  display: flex;
+  align-items: center;
+}
+
+header .menu_list_pc > li {
+  padding: 10px 0;
+}
+
 /*******************************/
+body._pc header .menu__list_pc > li {
+  position: relative;
+  margin: 0 0 0 20px;
+}
+
+body._pc header .menu__link {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+body._pc header ul {
+  list-style: none;
+}
+
+/*************menu__icon*****************/
+
+.menu__icon {
+  display: none;
+}
+
+/*************************/
 
 /***heading section***/
 
@@ -376,5 +415,172 @@ footer h2 {
 @media (max-width: 1200px) {
   body {
     max-width: 992px;
+  }
+
+  header h1 {
+    margin-left: -25%;
+  }
+
+  header .menu__list > li {
+    position: relative;
+    margin: 0 0 0 20px;
+  }
+
+  header .menu__link {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  header .menu__link:hover {
+    text-decoration: underline;
+  }
+
+  /*************menu__icon************/
+
+  .menu__icon {
+    margin: 0 0 0 0;
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .menu__icon span,
+  .menu__icon::before,
+  .menu__icon::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: black;
+  }
+
+  .menu__icon::before,
+  .menu__icon::after {
+    content: "";
+  }
+
+  .menu__icon::before {
+    top: 0;
+  }
+
+  .menu__icon::after {
+    bottom: 0;
+  }
+
+  .menu__icon span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+
+  .menu__icon._active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+
+  .menu__icon._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+
+  .menu__icon._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+  }
+
+  .menu__body {
+    position: fixed;
+    top: 20px;
+    left: -100%;
+    width: 30%;
+    height: 60%;
+    padding: 100px 30px 30px 30px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu__body._active {
+    transform: translate(0px, 0px);
+    left: 0;
+  }
+
+  header .menu__body .menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav .menu_list_pc li {
+    font-size: 24px;
+    border: none;
+    margin-bottom: 3vh;
+  }
+
+  header nav .menu_list_pc li:hover {
+    border: none;
+  }
+
+  /**other**/
+  .headingSection .flexDiv {
+    justify-content: space-around;
+  }
+
+  .headingSection .flexDiv .review_design {
+    font-size: 1.3em;
+  }
+
+  .headingSection .review_price .flatRate {
+    font-size: 1.1em;
+  }
+
+  .headingSection .review_price .price {
+    line-height: 0.6em;
+    font-size: 4em;
+  }
+
+  .critique .pictureContainer {
+    margin-left: 7%;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    justify-content: space-around;
+  }
+
+  .headingSection .flexDiv {
+    justify-content: space-around;
+  }
+
+  .getInTouch img {
+    width: 7%;
+    margin-bottom: -5%;
+  }
+
+  .headingSection h2 {
+    text-align: center;
+    background-image: url(../img/home_hero.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 100vh;
+    margin: 10vh 0 25vh 0;
+    font-family: "Graphik-Regular";
+    font-size: 2em;
+  }
+
+  .deliverables {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10%;
+  }
+
+  .deliverables img {
+    width: 30em;
+    height: 40em;
+    margin-bottom: 8em;
   }
 }

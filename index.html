@@ -9,19 +9,32 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">#Hacks</a></li>
-        </ul>
-      </nav>
+      <div class="menu__icon">
+        <span></span>
+      </div>
+      <div class="header__menu menu">
+        <nav class="menu__body">
+          <ul class="menu__list menu_list_pc">
+            <li class=".menu__link">
+              <a data-goto=".page_heading" href="">Home</a>
+            </li>
+            <li class=".menu__link">
+              <a data-goto=".page_main" href="">About</a>
+            </li>
+            <li class=".menu__link">
+              <a data-goto=".page_footer" href="">Contact</a>
+            </li>
+            <li class=".menu__link">
+              <a data-goto=".page_critique" href="">#Hacks</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <h1>Design Critique</h1>
       <button>Get started</button>
     </header>
     <main>
-      <section class="headingSection">
+      <section class="headingSection page_heading">
         <h2>Get your design critiqued by world-class designers</h2>
         <div class="flexDiv">
           <p class="review_design">
@@ -61,7 +74,7 @@
           </p>
         </article>
       </section>
-      <section class="howItWorks">
+      <section class="howItWorks page_main">
         <img src="./assets/img/home_how_it_works.png" alt="" />
         <article>
           <h2>How it Works</h2>
@@ -83,7 +96,7 @@
           </p>
         </article>
       </section>
-      <section class="critique">
+      <section class="critique page_critique">
         <h2>Critique</h2>
         <div class="fillOut">
           <p>
@@ -106,9 +119,8 @@
         </section>
       </section>
     </main>
-    <footer>
+    <footer class="page_footer">
       <h2>Have any questions?</h2>
-      <img src="" alt="" />
       <p class="getInTouch">
         <img src="./assets/img/costume_guy.png" alt="" />
 
@@ -118,5 +130,6 @@
         >
       </p>
     </footer>
+    <script src="./assets/scripts/script.js"></script>
   </body>
 </html>
