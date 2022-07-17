@@ -97,6 +97,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 8vh 0 8vh 0;
+  overflow-x: hidden;
 }
 /*************/
 header {
@@ -321,6 +322,7 @@ p {
   text-align: center;
   border-bottom: 1px solid black;
   margin-bottom: 20vh;
+  overflow-x: hidden;
 }
 
 .critique h2 {
@@ -404,6 +406,10 @@ footer h2 {
 @media (max-width: 1400px) {
   body {
     max-width: 1200px;
+  }
+
+  .headingSection .flexDiv {
+    justify-content: space-around;
   }
 
   .critique {
