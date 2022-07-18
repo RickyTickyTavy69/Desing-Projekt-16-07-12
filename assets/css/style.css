@@ -403,7 +403,7 @@ footer h2 {
 
 /********************media**********************/
 
-@media (max-width: 1400px) {
+/*@media (max-width: 1400px) {
   body {
     max-width: 1200px;
   }
@@ -440,11 +440,11 @@ footer h2 {
 
   header .menu__link:hover {
     text-decoration: underline;
-  }
+  }*/
 
-  /*************menu__icon************/
+/*************menu__icon************/
 
-  .menu__icon {
+/*.menu__icon {
     margin: 0 0 0 0;
     z-index: 5;
     display: block;
@@ -525,10 +525,10 @@ footer h2 {
 
   header nav .menu_list_pc li:hover {
     border: none;
-  }
+  }*/
 
-  /**other**/
-  .headingSection .flexDiv {
+/**other**/
+/*.headingSection .flexDiv {
     justify-content: space-around;
   }
 
@@ -548,9 +548,9 @@ footer h2 {
   .critique .pictureContainer {
     margin-left: 7%;
   }
-}
+}*/
 
-@media (max-width: 992px) {
+/*@media (max-width: 992px) {
   header {
     justify-content: space-around;
   }
@@ -589,4 +589,4 @@ footer h2 {
     height: 40em;
     margin-bottom: 8em;
   }
-}
+}*/
